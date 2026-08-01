@@ -1,24 +1,88 @@
-This is free and unencumbered software released into the public domain.
+项目简介
+基于原生 PHP 开发、KVM 虚拟化驱动的商用云主机自助售卖平台，面向 IDC、私有云、算力租赁场景，一站式实现前台售卖、多节点虚拟化调度、财务计费、运维监控、客服、代理分销、广告联盟完整业务链路。
+✨ 核心功能
+1. 虚拟化核心
+多节点 KVM 集群调度，自动分配空闲宿主机
+qcow2 快照、系统重装、VNC/WebSSH 控制台
+流量自动统计、超限停机、月度流量重置
+cloud-init 自动配置主机密码 / 网络
+2. 用户前台
+套餐选购、自定义配置、余额 / 易支付支付
+主机自助开关机 / 快照 / 改密 / 升级配置
+工单、积分推广、代理申请、在线客服
+多语言国际化、滑块人机验证
+3. 管理后台
+节点 / IP 池 / 镜像 / 套餐统一管理
+营收报表、订单流水、资源监控告警
+API 密钥管理、系统更新、安全防护配置
+4. 商业配套模块
+在线人工客服 + SmartAI 智能问答
+三级代理分销、佣金结算、提现系统
+CPC/CPM 广告联盟 + 多层防作弊风控
+完整财务账单、到期自动管控
+5. 安全体系
+WAF 防注入 / XSS、接口 HMAC 签名校验
+登录防爆破、IP 封禁、操作审计日志
+远程授权校验、定时安全巡检
+🛠 技术栈
+后端：原生 PHP7.4~8.2（无框架）
+虚拟化：KVM + Libvirt + QEMU
+数据库：MySQL 5.7+/MariaDB
+Web：Nginx + PHP-FPM
+控制台：noVNC + WebSSH
+支付：易支付 SDK
+📋 系统要求
+服务环境
+系统：Ubuntu 18.04+/CentOS7+/Debian10+
+CPU：支持 Intel VT-x / AMD-V 虚拟化
+内存：最低 4G，推荐 8G+
+磁盘：SSD 50G 以上
+PHP 必备扩展
+pdo_mysql mbstring curl gd openssl json session
+🚀 快速部署,付费版本购买链接guojici.vip
+方式 1：一键安装脚本（推荐）
+bash
+curl -fsSL https://guojici.vip/install.sh | bash
+# 可选wget
+wget -O install.sh https://guojici.vip/install.sh && bash install.sh
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+安装模式选择：
+仅 Web 控制台（分离节点部署）
+纯 KVM 计算节点
+全量单机部署（控制台 + KVM）
+仅 KVM+VNC 后端
+方式 2：手动部署
+克隆 / 上传源码至网站根目录
+创建 MySQL 库并导入 data/init.sql
+修改 config/app.php 数据库配置
+访问 install.php 可视化安装向导
+配置定时任务（每 5 分钟执行监控脚本）
+cron
+*/5 * * * * php /网站目录/cron/traffic_monitor.php
+*/5 * * * * php /网站目录/cron/node_monitor.php
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+📁 项目目录简要
+plaintext
+商城/
+├── admin/        管理员后台
+├── user/         用户中心
+├── staff/        客服工作台
+├── api/          开放API接口
+├── config/       核心类库与配置
+├── cron/         定时任务脚本
+├── novnc/        VNC控制台
+├── docs/         完整项目文档
+├── SDK/          支付接口
+├── data/         数据库初始化脚本
+└── install.php   一键安装页
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
-
-For more information, please refer to <https://unlicense.org>
+📖 文档
+完整开发 & 运维文档：docs/项目文档.md
+包含：架构、数据库、API、部署、运维、定时任务、各模块详细说明
+⚠️ 注意事项
+系统需合法授权核验码方可完整使用，未授权会进入锁定页面
+2 KVM 宿主机必须开启 CPU 虚拟化，否则无法创建虚拟机
+生产环境建议关闭调试模式，配置 HTTPS
+定期备份数据库与虚拟机镜像
+📄 声明
+本项目仅供学习、企业内部私有云使用，禁止未经授权倒卖源码、搭建公有云商用服务，违规后果自负。
