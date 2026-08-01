@@ -25,7 +25,7 @@ WAF 防注入 / XSS、接口 HMAC 签名校验
 登录防爆破、IP 封禁、操作审计日志
 远程授权校验、定时安全巡检
 🛠 技术栈
-后端：原生 PHP7.4~8.2（无框架）
+后端：原生 PHP7.4（无框架）
 虚拟化：KVM + Libvirt + QEMU
 数据库：MySQL 5.7+/MariaDB
 Web：Nginx + PHP-FPM
