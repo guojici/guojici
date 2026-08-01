@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="guojici云 隐私政策与服务条款">
+    <meta name="keywords" content="隐私政策,服务条款,用户协议,guojici云">
+    <title>隐私政策与服务条款 - guojici云</title>
+    <style>
+        :root {
+            --primary: #1677ff;
+            --primary-hover: #0958d9;
+            --primary-lighter: #e6f4ff;
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success: #00b42a;
+            --warning: #ff7d00;
+            --danger: #f53f3f;
+            --text-primary: #1d2129;
+            --text-regular: #4e5969;
+            --text-secondary: #86909c;
+            --bg-page: #f5f7fa;
+            --bg-card: #ffffff;
+            --bg-sidebar: #0a1628;
+            --border: #e5e6eb;
+            --border-light: #f2f3f5;
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-page);
+            color: var(--text-regular);
+            line-height: 1.8;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-sidebar);
+            color: #fff;
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo-icon { font-size: 28px; }
+
+        .header-nav { display: flex; gap: 24px; }
+
+        .header-nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover { color: #fff; }
+
+        /* Hero */
+        .hero {
+            background: var(--primary-gradient);
+            color: #fff;
+            padding: 50px 24px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-meta {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-top: 16px;
+        }
+
+        /* Layout */
+        .layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 24px;
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 32px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 90px;
+            align-self: start;
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            box-shadow: var(--shadow-md);
+            max-height: calc(100vh - 110px);
+            overflow-y: auto;
+        }
+
+        .sidebar-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-group { margin-bottom: 24px; }
+
+        .nav-item {
+            display: block;
+            padding: 10px 12px;
+            color: var(--text-regular);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+            margin-bottom: 2px;
+        }
+
+        .nav-item:hover {
+            background: var(--bg-page);
+            color: var(--primary);
+        }
+
+        .nav-item.active {
+            background: var(--primary-lighter);
+            color: var(--primary);
+            font-weight: 500;
+            border-left-color: var(--primary);
+        }
+
+        /* Main content */
+        .main {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            min-height: 600px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 4px;
+            background: var(--bg-page);
+            padding: 4px;
+            border-radius: var(--radius);
+            margin-bottom: 32px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px 20px;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .tab-btn.active {
+            background: var(--bg-card);
+            color: var(--primary);
+            box-shadow: var(--shadow-md);
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Document styles */
+        .doc-header {
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 20px;
+            margin-bottom: 32px;
+        }
+
+        .doc-header h2 {
+            font-size: 26px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .doc-header .meta {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .doc-section {
+            margin-bottom: 40px;
+        }
+
+        .doc-section h3 {
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            padding-left: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .doc-section h4 {
+            font-size: 15px;
+            color: var(--text-primary);
+            margin: 16px 0 8px;
+            font-weight: 600;
+        }
+
+        .doc-section p {
+            margin-bottom: 12px;
+            color: var(--text-regular);
+            font-size: 14px;
+        }
+
+        .doc-section ul,
+        .doc-section ol {
+            margin: 12px 0 12px 24px;
+            color: var(--text-regular);
+            font-size: 14px;
+        }
+
+        .doc-section li {
+            margin-bottom: 8px;
+        }
+
+        .doc-section strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .doc-section code {
+            background: var(--bg-page);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 13px;
+            color: var(--primary);
+        }
+
+        /* Info boxes */
+        .info-box {
+            background: var(--primary-lighter);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 4px;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .info-box strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .info-box.warning {
+            background: #fff7e8;
+            border-left-color: var(--warning);
+        }
+
+        .info-box.warning strong { color: var(--warning); }
+
+        .info-box.danger {
+            background: #ffece8;
+            border-left-color: var(--danger);
+        }
+
+        .info-box.danger strong { color: var(--danger); }
+
+        .info-box.success {
+            background: #e8ffea;
+            border-left-color: var(--success);
+        }
+
+        .info-box.success strong { color: var(--success); }
+
+        /* Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .data-table th {
+            background: var(--bg-page);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .data-table tr:last-child td { border-bottom: none; }
+
+        /* Contact card */
+        .contact-card {
+            background: var(--primary-gradient);
+            color: #fff;
+            padding: 24px;
+            border-radius: var(--radius-lg);
+            margin-top: 32px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            color: #fff;
+            border-left: none;
+            padding-left: 0;
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 16px;
+            border-radius: var(--radius);
+        }
+
+        .contact-item .label {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-bottom: 4px;
+        }
+
+        .contact-item .value {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-sidebar);
+            color: rgba(255,255,255,0.6);
+            padding: 32px 24px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+
+        .footer a:hover { color: #fff; }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                max-height: none;
+            }
+
+            .header-nav { display: none; }
+
+            .main { padding: 24px; }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 24px; }
+            .tabs { flex-direction: column; }
+            .data-table { display: block; overflow-x: auto; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <span class="logo-icon">☁️</span>
+                <span>guojici云</span>
+            </a>
+            <nav class="header-nav">
+                <a href="https://guojici.vip" target="_blank">官网</a>
+                <a href="/index.php">返回首页</a>
+                <a href="mailto:support@guojici.vip">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>📜 隐私政策与服务条款</h1>
+        <p>我们尊重并保护每一位用户的隐私。请仔细阅读以下协议内容，了解我们如何收集、使用和保护您的信息。</p>
+        <span class="hero-meta">最后更新：2026年7月19日</span>
+    </section>
+
+    <!-- Main Layout -->
+    <div class="layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="nav-group" id="nav-privacy">
+                <div class="sidebar-title">隐私政策</div>
+                <a class="nav-item active" data-tab="privacy" data-section="p-intro">概述</a>
+                <a class="nav-item" data-tab="privacy" data-section="p-collect">信息收集</a>
+                <a class="nav-item" data-tab="privacy" data-section="p-use">信息使用</a>
+                <a class="nav-item" data-tab="privacy" data-section="p-share">信息共享</a>
+                <a class="nav-item" data-tab="privacy" data-section="p-cookie">Cookie</a>
+                <a class="nav-item" data-tab="privacy" data-section="p-protect">数据安全</a>
+                <a class="nav-item" data-tab="privacy" data-section="p-rights">用户权利</a>
+                <a class="nav-item" data-tab="privacy" data-section="p-children">未成年人</a>
+                <a class="nav-item" data-tab="privacy" data-section="p-change">政策更新</a>
+            </div>
+
+            <div class="nav-group" id="nav-terms" style="display:none;">
+                <div class="sidebar-title">服务条款</div>
+                <a class="nav-item" data-tab="terms" data-section="t-intro">协议接受</a>
+                <a class="nav-item" data-tab="terms" data-section="t-service">服务说明</a>
+                <a class="nav-item" data-tab="terms" data-section="t-account">账号注册</a>
+                <a class="nav-item" data-tab="terms" data-section="t-responsibility">用户责任</a>
+                <a class="nav-item" data-tab="terms" data-section="t-payment">付费服务</a>
+                <a class="nav-item" data-tab="terms" data-section="t-refund">退款政策</a>
+                <a class="nav-item" data-tab="terms" data-section="t-ip">知识产权</a>
+                <a class="nav-item" data-tab="terms" data-section="t-liability">免责声明</a>
+                <a class="nav-item" data-tab="terms" data-section="t-violation">违规处理</a>
+                <a class="nav-item" data-tab="terms" data-section="t-law">法律适用</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Tab Switcher -->
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('privacy')">🔒 隐私政策</button>
+                <button class="tab-btn" onclick="switchTab('terms')">📄 服务条款</button>
+            </div>
+
+            <!-- Privacy Policy -->
+            <div class="tab-content active" id="tab-privacy">
+                <div class="doc-header">
+                    <h2>🔒 隐私政策</h2>
+                    <div class="meta">生效日期：2026年7月19日 | 版本：v1.0</div>
+                </div>
+
+                <div class="doc-section" id="p-intro">
+                    <h3>一、概述</h3>
+                    <p>guojici云（以下简称"我们"）深知个人信息对您的重要性，我们将按照法律法规的规定，采取相应的安全保护措施，尽力保护您的个人信息安全。</p>
+                    <p>本隐私政策适用于您通过我们的网站、客户端、API 等方式访问和使用我们的服务。</p>
+                    <div class="info-box">
+                        <strong>重要提示</strong>
+                        请您在使用我们的服务前，仔细阅读并充分理解本隐私政策的全部内容。如您不同意本政策的任何内容，请停止使用我们的服务。
+                    </div>
+                </div>
+
+                <div class="doc-section" id="p-collect">
+                    <h3>二、信息收集</h3>
+                    <p>为了向您提供服务，我们会收集以下信息：</p>
+
+                    <h4>2.1 您主动提供的信息</h4>
+                    <ul>
+                        <li><strong>账号信息</strong>：用户名、密码（加密存储）、邮箱、手机号</li>
+                        <li><strong>实名信息</strong>：根据法律法规要求，部分服务需实名认证</li>
+                        <li><strong>支付信息</strong>：订单金额、支付时间、支付方式</li>
+                        <li><strong>服务配置</strong>：KVM 节点配置、虚拟机参数等</li>
+                    </ul>
+
+                    <h4>2.2 自动收集的信息</h4>
+                    <ul>
+                        <li><strong>设备信息</strong>：IP 地址、操作系统、浏览器版本、设备标识</li>
+                        <li><strong>日志信息</strong>：访问时间、访问页面、操作记录、请求来源</li>
+                        <li><strong>使用数据</strong>：服务使用时长、功能偏好、性能数据</li>
+                    </ul>
+
+                    <h4>2.3 收集目的与法律依据</h4>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>信息类型</th>
+                                <th>收集目的</th>
+                                <th>法律依据</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>账号信息</td>
+                                <td>提供服务、账号管理</td>
+                                <td>合同履行</td>
+                            </tr>
+                            <tr>
+                                <td>设备信息</td>
+                                <td>安全防护、故障排查</td>
+                                <td>合法权益</td>
+                            </tr>
+                            <tr>
+                                <td>日志信息</td>
+                                <td>安全审计、反欺诈</td>
+                                <td>合法权益</td>
+                            </tr>
+                            <tr>
+                                <td>实名信息</td>
+                                <td>合规要求</td>
+                                <td>法律义务</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="doc-section" id="p-use">
+                    <h3>三、信息使用</h3>
+                    <p>我们收集的信息将用于以下目的：</p>
+                    <ol>
+                        <li><strong>提供服务</strong>：包括账号注册、服务开通、虚拟机管理、技术支持等</li>
+                        <li><strong>安全保障</strong>：身份验证、安全防护、反欺诈、入侵检测</li>
+                        <li><strong>服务改进</strong>：分析使用习惯，优化产品功能，提升用户体验</li>
+                        <li><strong>故障排查</strong>：诊断系统问题，恢复服务，预防类似问题</li>
+                        <li><strong>通知沟通</strong>：服务变更、安全提醒、重要公告</li>
+                        <li><strong>合规要求</strong>：配合监管要求，履行法律义务</li>
+                        <li><strong>计费结算</strong>：计算费用、生成账单、处理支付</li>
+                    </ol>
+                    <div class="info-box warning">
+                        <strong>承诺</strong>
+                        我们不会将您的个人信息用于本政策未载明的其他用途。如需变更使用目的，将再次征得您的同意。
+                    </div>
+                </div>
+
+                <div class="doc-section" id="p-share">
+                    <h3>四、信息共享与披露</h3>
+
+                    <h4>4.1 共享情形</h4>
+                    <p>我们不会向第三方出售您的个人信息。在以下情形下，我们可能会共享部分信息：</p>
+                    <ul>
+                        <li><strong>服务提供商</strong>：支付网关、短信服务商、CDN 提供商等（仅共享必要信息）</li>
+                        <li><strong>法律要求</strong>：应法律法规要求，或应政府主管部门的合法要求</li>
+                        <li><strong>安全必要</strong>：为保护用户、公众或我们免受损害</li>
+                        <li><strong>合并收购</strong>：如涉及合并、收购或破产清算，可能涉及信息转移</li>
+                    </ul>
+
+                    <h4>4.2 共享原则</h4>
+                    <ol>
+                        <li>仅共享为达成目的所必需的最少信息</li>
+                        <li>要求接收方按本政策同等保护您的信息</li>
+                        <li>要求接收方不得用于其他目的</li>
+                    </ol>
+                </div>
+
+                <div class="doc-section" id="p-cookie">
+                    <h3>五、Cookie 与同类技术</h3>
+                    <p>我们使用 Cookie 和同类技术来记住您的登录状态、保存偏好设置、分析使用行为：</p>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Cookie 类型</th>
+                                <th>用途</th>
+                                <th>保留时长</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>会话 Cookie</td>
+                                <td>维持登录状态</td>
+                                <td>会话结束即清除</td>
+                            </tr>
+                            <tr>
+                                <td>偏好 Cookie</td>
+                                <td>记住您的设置</td>
+                                <td>30 天</td>
+                            </tr>
+                            <tr>
+                                <td>安全 Cookie</td>
+                                <td>CSRF 防护</td>
+                                <td>会话结束即清除</td>
+                            </tr>
+                            <tr>
+                                <td>分析 Cookie</td>
+                                <td>统计使用数据</td>
+                                <td>90 天</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>您可以通过浏览器设置管理或禁用 Cookie，但这可能影响部分功能的使用。</p>
+                </div>
+
+                <div class="doc-section" id="p-protect">
+                    <h3>六、数据安全</h3>
+                    <p>我们采取多重措施保护您的信息安全：</p>
+
+                    <h4>6.1 技术措施</h4>
+                    <ul>
+                        <li><strong>传输加密</strong>：全站 HTTPS / TLS 1.2+ 加密传输</li>
+                        <li><strong>存储加密</strong>：敏感数据采用 AES-256-CBC 加密存储</li>
+                        <li><strong>密码保护</strong>：使用 bcrypt 不可逆哈希算法存储密码</li>
+                        <li><strong>接口签名</strong>：API 接口采用 RSA 数字签名验签</li>
+                        <li><strong>WAF 防护</strong>：部署 Web 应用防火墙，拦截 SQL 注入、XSS 等攻击</li>
+                        <li><strong>访问控制</strong>：严格的权限管理，最小权限原则</li>
+                        <li><strong>日志审计</strong>：记录关键操作日志，定期审计</li>
+                    </ul>
+
+                    <h4>6.2 管理措施</h4>
+                    <ul>
+                        <li>建立数据安全管理制度和流程</li>
+                        <li>对员工进行安全培训和保密管理</li>
+                        <li>定期进行安全评估和漏洞扫描</li>
+                        <li>制定应急响应预案</li>
+                    </ul>
+
+                    <h4>6.3 数据保留</h4>
+                    <p>我们仅在为提供服务所必需的期限内保留您的个人信息。超过保留期限后，将进行删除或匿名化处理。</p>
+                </div>
+
+                <div class="doc-section" id="p-rights">
+                    <h3>七、您的权利</h3>
+                    <p>根据相关法律法规，您享有以下权利：</p>
+                    <ol>
+                        <li><strong>查阅权</strong>：您有权查阅我们持有的您的个人信息</li>
+                        <li><strong>更正权</strong>：您有权要求我们更正不准确的信息</li>
+                        <li><strong>删除权</strong>：在法律允许的范围内，您有权要求删除您的信息</li>
+                        <li><strong>撤回同意权</strong>：您有权撤回此前给予的同意</li>
+                        <li><strong>数据可携带权</strong>：您有权获取您的个人信息副本</li>
+                        <li><strong>反对权</strong>：您有权反对我们基于合法利益处理您的信息</li>
+                    </ol>
+                    <div class="info-box">
+                        <strong>行使权利</strong>
+                        如需行使上述权利，请通过本政策末尾的联系方式与我们沟通。我们将在 15 个工作日内回复您的请求。
+                    </div>
+                </div>
+
+                <div class="doc-section" id="p-children">
+                    <h3>八、未成年人保护</h3>
+                    <p>我们的服务主要面向成年人。我们不会故意收集未满 14 周岁未成年人的个人信息。</p>
+                    <p>如果您是未成年人的监护人，发现您的孩子向我们提供了个人信息，请通过本政策末尾的联系方式联系我们，我们将及时删除相关信息。</p>
+                    <div class="info-box danger">
+                        <strong>特别提示</strong>
+                        未成年人在使用我们的服务前，应事先取得监护人的同意。监护人应承担对未成年人使用我们服务的指导和监督责任。
+                    </div>
+                </div>
+
+                <div class="doc-section" id="p-change">
+                    <h3>九、政策更新</h3>
+                    <p>我们可能会不时更新本隐私政策。更新后的政策将在本页面发布，并更新"最后更新"日期。</p>
+                    <ul>
+                        <li><strong>重大变更</strong>：我们会通过弹窗、邮件等方式显著通知您</li>
+                        <li><strong>一般变更</strong>：直接在本页面更新，建议您定期查阅</li>
+                        <li><strong>生效时间</strong>：除特别说明外，更新后的政策自发布之日起生效</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Terms of Service -->
+            <div class="tab-content" id="tab-terms">
+                <div class="doc-header">
+                    <h2>📄 服务条款</h2>
+                    <div class="meta">生效日期：2026年7月19日 | 版本：v1.0</div>
+                </div>
+
+                <div class="doc-section" id="t-intro">
+                    <h3>一、协议接受</h3>
+                    <p>欢迎您使用 guojici云 服务。请您仔细阅读以下服务条款（以下简称"本条款"）。</p>
+                    <p>当您注册账号、使用服务或以任何方式实际使用我们的服务时，即表示您已阅读、理解并同意接受本条款的全部内容。如您不同意本条款的任何内容，请立即停止使用我们的服务。</p>
+                    <div class="info-box warning">
+                        <strong>请注意</strong>
+                        本条款包含免责条款和限制责任条款。请您特别关注以加粗形式标注的内容。
+                    </div>
+                </div>
+
+                <div class="doc-section" id="t-service">
+                    <h3>二、服务说明</h3>
+                    <p>我们提供基于 KVM 虚拟化技术的云计算服务，包括但不限于：</p>
+                    <ul>
+                        <li>虚拟机创建、管理与监控</li>
+                        <li>VNC 远程控制台访问</li>
+                        <li>存储池与网络管理</li>
+                        <li>多节点集中管理</li>
+                        <li>用户权限管理</li>
+                        <li>计费与订单管理</li>
+                        <li>技术支持与运维服务</li>
+                    </ul>
+                    <p>我们有权在提前通知的情况下，新增、变更、停止部分服务。如服务的变更将对您造成重大影响，我们会提前 30 天通知您。</p>
+                </div>
+
+                <div class="doc-section" id="t-account">
+                    <h3>三、账号注册与管理</h3>
+
+                    <h4>3.1 注册条件</h4>
+                    <ul>
+                        <li>您必须是具备完全民事行为能力的自然人，或依法成立的组织</li>
+                        <li>您提供的信息必须真实、准确、完整</li>
+                        <li>每个用户仅可注册一个账号（特殊需求请联系客服）</li>
+                        <li>账号不可转让、出借或售卖</li>
+                    </ul>
+
+                    <h4>3.2 账号安全</h4>
+                    <ul>
+                        <li>您应妥善保管账号和密码，对账号下所有活动负责</li>
+                        <li>如发现账号被盗用或异常使用，请立即通知我们</li>
+                        <li>因您保管不善导致的损失，由您自行承担</li>
+                        <li>我们有权对异常账号采取限制措施</li>
+                    </ul>
+
+                    <h4>3.3 密码要求</h4>
+                    <p>为保障账号安全，您的密码需满足：</p>
+                    <ul>
+                        <li>长度至少 8 位</li>
+                        <li>包含大小写字母、数字和特殊字符</li>
+                        <li>不能包含连续 3 个以上相同字符</li>
+                        <li>建议定期更换密码</li>
+                    </ul>
+                </div>
+
+                <div class="doc-section" id="t-responsibility">
+                    <h3>四、用户责任</h3>
+
+                    <h4>4.1 您的承诺</h4>
+                    <p>您在使用我们的服务时，承诺：</p>
+                    <ol>
+                        <li>遵守中华人民共和国相关法律法规</li>
+                        <li>不将服务用于任何非法目的</li>
+                        <li>不侵犯他人的知识产权、隐私权等合法权益</li>
+                        <li>不干扰或破坏服务的正常运行</li>
+                        <li>不传播病毒、木马等恶意程序</li>
+                        <li>不尝试未授权访问我们的系统或数据</li>
+                        <li>不进行逆向工程、反编译或反汇编</li>
+                    </ol>
+
+                    <h4>4.2 禁止行为</h4>
+                    <div class="info-box danger">
+                        <strong>严禁以下行为</strong>
+                        <ul style="margin-top:8px;">
+                            <li>利用服务从事黑客攻击、DDoS 攻击等违法行为</li>
+                            <li>发送垃圾邮件、钓鱼信息</li>
+                            <li>存储或传播违法内容（色情、赌博、诈骗等）</li>
+                            <li>挖矿、刷流量、其他滥用资源的行为</li>
+                            <li>搭建代理服务用于翻墙等违规用途</li>
+                            <li>利用虚拟机发送恶意流量攻击他人</li>
+                        </ul>
+                    </div>
+
+                    <h4>4.3 资源使用</h4>
+                    <ul>
+                        <li>您应按所购买套餐合理使用资源</li>
+                        <li>不得超负荷使用，影响其他用户</li>
+                        <li>我们有权对异常使用行为进行限制</li>
+                        <li>长期不登录的账号，我们有权回收资源</li>
+                    </ul>
+                </div>
+
+                <div class="doc-section" id="t-payment">
+                    <h3>五、付费服务</h3>
+
+                    <h4>5.1 计费方式</h4>
+                    <ul>
+                        <li>我们提供按时长计费和按套餐计费两种方式</li>
+                        <li>具体价格以网站公示为准</li>
+                        <li>我们有权调整价格，调整前已下单的订单不受影响</li>
+                    </ul>
+
+                    <h4>5.2 支付方式</h4>
+                    <p>我们支持的支付方式包括：</p>
+                    <ul>
+                        <li>支付宝</li>
+                        <li>微信支付</li>
+                        <li>银行转账（仅限企业用户）</li>
+                        <li>账户余额（充值后使用）</li>
+                    </ul>
+
+                    <h4>5.3 账单与发票</h4>
+                    <ul>
+                        <li>您可在用户中心查看账单明细</li>
+                        <li>如需发票，请在支付后 30 天内申请</li>
+                        <li>发票将按您提供的信息开具，请仔细核对</li>
+                    </ul>
+
+                    <h4>5.4 逾期处理</h4>
+                    <ul>
+                        <li>服务到期未续费，将进入 7 天宽限期</li>
+                        <li>宽限期内数据保留，但服务暂停</li>
+                        <li>宽限期结束后，数据将被删除且不可恢复</li>
+                    </ul>
+                </div>
+
+                <div class="doc-section" id="t-refund">
+                    <h3>六、退款政策</h3>
+                    <div class="info-box">
+                        <strong>退款原则</strong>
+                        由于云计算服务的特殊性，已使用的服务原则上不予退款。特殊情况按以下政策处理：
+                    </div>
+
+                    <h4>6.1 可退款情形</h4>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>情形</th>
+                                <th>退款比例</th>
+                                <th>申请时限</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>服务未开通</td>
+                                <td>100% 全额退款</td>
+                                <td>支付后 7 天内</td>
+                            </tr>
+                            <tr>
+                                <td>服务开通但未实际使用</td>
+                                <td>扣除手续费后退还</td>
+                                <td>开通后 24 小时内</td>
+                            </tr>
+                            <tr>
+                                <td>因我方原因服务不可用</td>
+                                <td>按不可用时长比例退还</td>
+                                <td>随时申请</td>
+                            </tr>
+                            <tr>
+                                <td>用户主动放弃</td>
+                                <td>原则上不予退款</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>6.2 退款流程</h4>
+                    <ol>
+                        <li>提交退款申请（注明订单号、退款原因）</li>
+                        <li>客服审核（3-5 个工作日）</li>
+                        <li>审核通过后，退款至原支付渠道</li>
+                        <li>到账时间：3-15 个工作日</li>
+                    </ol>
+
+                    <h4>6.3 不予退款情形</h4>
+                    <ul>
+                        <li>因违规被关闭服务的</li>
+                        <li>已使用服务超过 24 小时的</li>
+                        <li>因用户自身原因导致服务无法使用的</li>
+                        <li>账号存在异常行为的</li>
+                    </ul>
+                </div>
+
+                <div class="doc-section" id="t-ip">
+                    <h3>七、知识产权</h3>
+
+                    <h4>7.1 我们的权利</h4>
+                    <p>本服务的所有内容，包括但不限于：</p>
+                    <ul>
+                        <li>软件代码、源码、目标码</li>
+                        <li>网站设计、界面、图标</li>
+                        <li>商标、Logo、品牌名称</li>
+                        <li>文档、教程、技术资料</li>
+                        <li>数据库结构和数据</li>
+                    </ul>
+                    <p>以上内容的知识产权均归我们所有，受中华人民共和国著作权法及相关国际条约保护。</p>
+
+                    <h4>7.2 您的权利</h4>
+                    <ul>
+                        <li>您上传的内容，知识产权归您所有</li>
+                        <li>您授予我们为提供服务所必需的使用权</li>
+                        <li>您保证上传内容不侵犯他人权利</li>
+                    </ul>
+
+                    <h4>7.3 源码保护</h4>
+                    <div class="info-box warning">
+                        <strong>特别注意</strong>
+                        本服务采用多层加密保护源码（AES-256-CBC、变量混淆、流程混淆、RSA 验签）。未经授权的逆向工程、反编译、破解行为将追究法律责任。
+                    </div>
+                </div>
+
+                <div class="doc-section" id="t-liability">
+                    <h3>八、免责声明</h3>
+
+                    <h4>8.1 服务可用性</h4>
+                    <p>我们承诺尽力保证服务的稳定运行，但不保证服务 100% 可用。以下情况导致的服务中断，我们不承担责任：</p>
+                    <ul>
+                        <li>不可抗力（地震、火灾、洪水、战争等）</li>
+                        <li>基础电信运营商网络故障</li>
+                        <li>系统维护、升级（会提前通知）</li>
+                        <li>第三方服务故障</li>
+                        <li>用户自身原因（配置错误、操作不当等）</li>
+                    </ul>
+
+                    <h4>8.2 数据丢失</h4>
+                    <div class="info-box danger">
+                        <strong>重要提示</strong>
+                        虽然我们采取多重备份措施，但仍无法 100% 保证数据不丢失。<strong>建议您定期备份重要数据</strong>。因不可抗力或系统故障导致的数据丢失，我们不承担赔偿责任。
+                    </div>
+
+                    <h4>8.3 第三方服务</h4>
+                    <p>本服务可能涉及第三方服务（如支付、短信、CDN 等），第三方服务的可用性由其自身保证，我们不对第三方服务的稳定性承担责任。</p>
+
+                    <h4>8.4 责任限制</h4>
+                    <p>在法律允许的范围内，我们的赔偿责任以您实际支付的费用为限。我们不承担因服务使用导致的间接损失、利润损失、数据丢失损失等。</p>
+                </div>
+
+                <div class="doc-section" id="t-violation">
+                    <h3>九、违规处理</h3>
+                    <p>如您违反本条款，我们有权根据情节严重程度采取以下措施：</p>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>违规级别</th>
+                                <th>处理措施</th>
+                                <th>示例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>轻微</td>
+                                <td>警告通知</td>
+                                <td>资源超用、配置异常</td>
+                            </tr>
+                            <tr>
+                                <td>一般</td>
+                                <td>暂停违规服务</td>
+                                <td>发送垃圾流量、异常外联</td>
+                            </tr>
+                            <tr>
+                                <td>严重</td>
+                                <td>封禁账号、删除资源</td>
+                                <td>黑客攻击、传播违法内容</td>
+                            </tr>
+                            <tr>
+                                <td>违法</td>
+                                <td>永久封禁、报警处理</td>
+                                <td>诈骗、赌博、儿童色情</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>因违规导致的服务暂停或账号封禁，已支付费用不予退还，且我们有权追究法律责任。</p>
+                </div>
+
+                <div class="doc-section" id="t-law">
+                    <h3>十、法律适用与争议解决</h3>
+
+                    <h4>10.1 法律适用</h4>
+                    <p>本条款的订立、生效、解释、执行均适用中华人民共和国法律。</p>
+
+                    <h4>10.2 争议解决</h4>
+                    <ol>
+                        <li><strong>协商解决</strong>：发生争议时，双方应首先通过友好协商解决</li>
+                        <li><strong>投诉反馈</strong>：您可通过本条款末尾的联系方式向我们投诉</li>
+                        <li><strong>仲裁或诉讼</strong>：协商不成的，任何一方可向我们所在地有管辖权的人民法院提起诉讼</li>
+                    </ol>
+
+                    <h4>10.3 条款可分性</h4>
+                    <p>如本条款的任何条款被认定为无效或不可执行，不影响其他条款的效力，其他条款仍完全有效。</p>
+
+                    <h4>10.4 完整协议</h4>
+                    <p>本条款（包括隐私政策）构成您与我们之间的完整协议，取代之前所有的口头或书面沟通。</p>
+                </div>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="contact-card">
+                <h3>📞 联系我们</h3>
+                <p>如您对本隐私政策或服务条款有任何疑问，欢迎通过以下方式联系我们：</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="label">📧 电子邮箱</div>
+                        <div class="value">support@guojici.vip</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="label">🌐 官方网站</div>
+                        <div class="value">guojici.vip</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="label">🕒 服务时间</div>
+                        <div class="value">9:00 - 18:00（工作日）</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024-2026 guojici云 版权所有</p>
+        <p style="margin-top: 8px;">
+            <a href="https://guojici.vip" target="_blank">官网</a> · 
+            <a href="/index.php">首页</a> · 
+            <a href="mailto:support@guojici.vip">联系我们</a>
+        </p>
+    </footer>
+
+    <script>
+        // Tab switching
+        function switchTab(tab) {
+            // Update tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Update tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById('tab-' + tab).classList.add('active');
+
+            // Update sidebar navigation
+            document.getElementById('nav-privacy').style.display = tab === 'privacy' ? 'block' : 'none';
+            document.getElementById('nav-terms').style.display = tab === 'terms' ? 'block' : 'none';
+
+            // Update active nav item
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            const firstNav = document.querySelector(`#nav-${tab} .nav-item`);
+            if (firstNav) firstNav.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Sidebar navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('data-section');
+                const tab = this.getAttribute('data-tab');
+
+                // If nav item is in hidden group, switch tab first
+                const navGroup = this.closest('.nav-group');
+                if (navGroup.style.display === 'none') {
+                    switchTab(tab);
+                }
+
+                // Update active state
+                document.querySelectorAll('.nav-item').forEach(nav => {
+                    nav.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                // Scroll to section
+                const target = document.getElementById(sectionId);
+                if (target) {
+                    const offset = 90;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Highlight current section on scroll
+        const sections = document.querySelectorAll('.doc-section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 120 && rect.bottom >= 120) {
+                    current = section.id;
+                }
+            });
+
+            if (current) {
+                navItems.forEach(item => {
+                    if (item.getAttribute('data-section') === current) {
+                        // Only update if the nav item's group is visible
+                        const navGroup = item.closest('.nav-group');
+                        if (navGroup && navGroup.style.display !== 'none') {
+                            navItems.forEach(n => n.classList.remove('active'));
+                            item.classList.add('active');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

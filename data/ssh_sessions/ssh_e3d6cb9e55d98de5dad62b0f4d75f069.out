@@ -1,0 +1,61 @@
+Collecting openai==1.39.0
+  Downloading https://mirrors.aliyun.com/pypi/packages/fe/1c/ec0a0618fd7982ff8f11b3d6318e921f7c7677d232fe69fa5fee2b3162b4/openai-1.39.0-py3-none-any.whl (336 kB)
+Requirement already satisfied: typing-extensions<5,>=4.7 in /www/server/panel/pyenv/lib/python3.7/site-packages (from openai==1.39.0) (4.7.1)
+Collecting anyio<5,>=3.5.0
+  Downloading https://mirrors.aliyun.com/pypi/packages/19/24/44299477fe7dcc9cb58d0a57d5a7588d6af2ff403fdd2d47a246c91a3246/anyio-3.7.1-py3-none-any.whl (80 kB)
+Requirement already satisfied: idna>=2.8 in /www/server/panel/pyenv/lib/python3.7/site-packages (from anyio<5,>=3.5.0->openai==1.39.0) (2.10)
+Collecting distro<2,>=1.7.0
+  Downloading https://mirrors.aliyun.com/pypi/packages/12/b3/231ffd4ab1fc9d679809f356cebee130ac7daa00d6d6f3206dd4fd137e9e/distro-1.9.0-py3-none-any.whl (20 kB)
+Collecting httpx<1,>=0.23.0
+  Downloading https://mirrors.aliyun.com/pypi/packages/ec/91/e41f64f03d2a13aee7e8c819d82ee3aa7cdc484d18c0ae859742597d5aa0/httpx-0.24.1-py3-none-any.whl (75 kB)
+Requirement already satisfied: certifi in /www/server/panel/pyenv/lib/python3.7/site-packages (from httpx<1,>=0.23.0->openai==1.39.0) (2020.12.5)
+Collecting httpcore<0.18.0,>=0.15.0
+  Downloading https://mirrors.aliyun.com/pypi/packages/94/2c/2bde7ff8dd2064395555220cbf7cba79991172bf5315a07eb3ac7688d9f1/httpcore-0.17.3-py3-none-any.whl (74 kB)
+Requirement already satisfied: h11<0.15,>=0.13 in /www/server/panel/pyenv/lib/python3.7/site-packages (from httpcore<0.18.0,>=0.15.0->httpx<1,>=0.23.0->openai==1.39.0) (0.14.0)
+Collecting sniffio
+  Downloading https://mirrors.aliyun.com/pypi/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl (10 kB)
+Collecting pydantic<3,>=1.9.0
+  Downloading https://mirrors.aliyun.com/pypi/packages/dd/b7/9aea7ee6c01fe3f3c03b8ca3c7797c866df5fecece9d6cb27caa138db2e2/pydantic-2.5.3-py3-none-any.whl (381 kB)
+Requirement already satisfied: importlib-metadata in /www/server/panel/pyenv/lib/python3.7/site-packages (from pydantic<3,>=1.9.0->openai==1.39.0) (6.7.0)
+Collecting pydantic-core==2.14.6
+  Downloading https://mirrors.aliyun.com/pypi/packages/c4/29/7c8ffcf7e736c7a6345f83657a34ea7cf710bf39be4452632f35c09b1905/pydantic_core-2.14.6-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+Collecting annotated-types>=0.4.0
+  Downloading https://mirrors.aliyun.com/pypi/packages/d8/f0/a2ee543a96cc624c35a9086f39b1ed2aa403c6d355dfe47a11ee5c64a164/annotated_types-0.5.0-py3-none-any.whl (11 kB)
+Collecting tqdm>4
+  Downloading https://mirrors.aliyun.com/pypi/packages/eb/75/1a0392bcc21c44dcdf87b3cf2d137e7829be2c083a1e38d44efca3d57a16/tqdm-4.68.2-py3-none-any.whl (78 kB)
+Collecting cached-property
+  Downloading https://mirrors.aliyun.com/pypi/packages/48/19/f2090f7dad41e225c7f2326e4cfe6fff49e57dedb5b53636c9551f86b069/cached_property-1.5.2-py2.py3-none-any.whl (7.6 kB)
+Collecting exceptiongroup
+  Downloading https://mirrors.aliyun.com/pypi/packages/8a/0e/97c33bf5009bdbac74fd2beace167cab3f978feb69cc36f1ef79360d6c4e/exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Requirement already satisfied: zipp>=0.5 in /www/server/panel/pyenv/lib/python3.7/site-packages (from importlib-metadata->pydantic<3,>=1.9.0->openai==1.39.0) (3.15.0)
+Installing collected packages: sniffio, exceptiongroup, anyio, pydantic-core, httpcore, annotated-types, tqdm, pydantic, httpx, distro, cached-property, openai, numpy
+Successfully installed annotated-types-0.5.0 anyio-3.7.1 cached-property-1.5.2 distro-1.9.0 exceptiongroup-1.3.1 httpcore-0.17.3 httpx-0.24.1 numpy-1.21.6 openai-1.39.0 pydantic-2.5.3 pydantic-core-2.14.6 sniffio-1.3.1 tqdm-4.68.2
+WARNING: You are using pip version 20.3.3; however, version 24.0 is available.
+You should consider upgrading via the '/www/server/panel/pyenv/bin/python3.7 -m pip install --upgrade pip' command.
+Starting Bt-Panel....	[32mdone[0m
+Starting Bt-Tasks... Bt-Tasks (pid 8660) already running
+username: 9e9o92jz
+Stopping Bt-Tasks...	[32mdone[0m
+Stopping Bt-Panel...	[32mdone[0m
+Starting Bt-Panel....	[32mdone[0m
+Starting Bt-Tasks... Bt-Tasks (pid 8949) already running
+受信ip证书申请失败，exit code=000
+转为使用默认自签证书，后续可手动在面板设置中重新使用Let's encrypt申请ip证书
+安装基础网站流量统计程序...
+安装基础网站流量统计程序完成
+==================================================================
+[32mCongratulations! Installed successfully![0m
+
+========================面板账户登录信息==========================
+
+ 【云服务器】请在安全组放行 39055 端口
+ 外网ipv4面板地址: https://111.121.210.28:39055/cdca186c
+ 内网面板地址:     https://192.168.122.51:39055/cdca186c
+ username: 9e9o92jz
+ password: 8b0fd36f
+
+ 浏览器访问以下链接，添加宝塔客服
+ https://www.bt.cn/new/wechat_customer
+==================================================================
+Time consumed:[32m 9 [0mMinute!
+[root@localhost ~]# 

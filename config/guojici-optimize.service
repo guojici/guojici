@@ -1,0 +1,20 @@
+[Unit]
+Description=guojici云 Performance Optimization Boot Service
+After=network.target mysql.service redis-server.service nginx.service
+Wants=redis-server.service mysql.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /www/wwwroot/default/config/boot_optimize.sh
+RemainAfterExit=yes
+StandardOutput=journal+console
+StandardError=journal+console
+
+# 超时设置
+TimeoutStartSec=120
+
+# 日志
+SyslogIdentifier=guojici-optimize
+
+[Install]
+WantedBy=multi-user.target

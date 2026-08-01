@@ -1,0 +1,5 @@
+password: 99mCfrLk6QnUcLxx
+port: 22
+ip: 192.168.122.235
+user: root
+host_id: 18
