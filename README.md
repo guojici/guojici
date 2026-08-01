@@ -1,6 +1,11 @@
 # guojici 云服务商城
-官网https://guojici.vip/
+
 > 基于 PHP + MySQL 的虚拟主机与 KVM 云服务器销售管理系统（社区版）
+
+![PHP](https://img.shields.io/badge/PHP-7.4-777BB4?logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-5.7%2B-44791A?logo=mysql&logoColor=white)
+![KVM](https://img.shields.io/badge/KVM-Libvirt-55A454?logo=linux&logoColor=white)
+![Version](https://img.shields.io/badge/Version-v2.4.1-883696)
 
 一个开箱即用的云计算服务销售平台，支持虚拟主机和 KVM 虚拟机的在线销售、自动开通、远程管理。内置用户系统、订单支付、工单客服、代理分销、API 开放平台等完整业务闭环。
 
@@ -57,7 +62,7 @@
 
 | 层级 | 技术 |
 |------|------|
-| 后端 | PHP 7.4+ / 8.x（原生，无框架） |
+| 后端 | PHP 7.4（原生，无框架） |
 | 数据库 | MySQL 5.7+ / MariaDB 10.3+ |
 | 缓存 | Redis（可选，提升性能） |
 | Web 服务器 | Nginx + PHP-FPM / Apache |
@@ -125,7 +130,7 @@ api/
 
 ### 环境要求
 
-- PHP 7.4 或更高版本（推荐 8.1+）
+- PHP 7.4（仅支持此版本）
 - MySQL 5.7 或更高版本
 - Nginx 或 Apache
 - Redis（可选，强烈推荐）
@@ -312,9 +317,32 @@ server {
 
 详见 `api/` 目录。
 
+## 版本功能矩阵
+
+| 功能 | 试用版 | 标准版 | 企业版 |社区版
+|------|--------|--------|--------|
+| | 5用户/5VM/2天 | 不限VM/用户 | 全部功能 |
+| 基础主机管理 | ✅ | ✅ | ✅ |
+| KVM 云服务器 | ✅ | ✅ | ✅ |
+| NAT 共享机型 | ❌ | ❌ | ✅ |
+| 广告联盟 | ❌ | ❌ | ✅ |
+| 推广返现 | ❌ | ❌ | ✅ |
+| 积分兑换 | ❌ | ❌ | ✅ |
+| 工单系统 | ✅ | ✅ | ✅ |
+| API 密钥 | ✅ | ✅ | ✅ |
+| 快照管理 | ✅ | ✅ | ✅ |
+| 防火墙管理 | ✅ | ✅ | ✅ |
+| 知识库系统 | ❌ | ✅ | ✅ |
+| 在线客服系统 | ❌ | ❌ | ✅ |
+| 服务器监控 | ❌ | ❌ | ✅ |
+| 性能监控 | ❌ | ❌ | ✅ |
+| 角色权限管理 | ❌ | ❌ | ✅ |
+
 ## 许可证
 
-社区版，仅供学习交流使用。
+本项目基于 [MIT License](LICENSE) 开源。
+
+任何人可自由使用、修改、分发、商用，只需在副本中保留原始版权声明和许可声明。
 
 ## 相关技术
 
